@@ -1,0 +1,38 @@
+[
+    {
+        "_id": 1,
+        "name": "Hammer",
+        "description": "",
+        "price": 200
+    },
+    {
+        "_id": 2,
+        "name": "Drill Machine",
+        "description": "",
+        "price": 5000
+    },
+    {
+        "_id": 3,
+        "name": "Tape Measure",
+        "description": "",
+        "price": 200
+    },
+    {
+        "_id": 4,
+        "name": "Screw Driver",
+        "description": "",
+        "price": 150
+    },
+    {
+        "_id": 5,
+        "name": "Tester",
+        "description": "",
+        "price": 100
+    },
+    {
+        "_id": 6,
+        "name": "PLus",
+        "description": "",
+        "price": 500
+    }
+]

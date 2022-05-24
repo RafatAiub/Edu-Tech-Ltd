@@ -9,6 +9,7 @@ import About from './Pages/About/About';
 import Order from './Pages/Order/Order';
 import Contact from './Pages/Contact/Contact';
 import Review from './Pages/Order/Review';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="review" element={<Review />} />
       </Routes>
       <ToastContainer />
+      <Footer></Footer>
     </div>
   );
 }
