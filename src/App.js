@@ -11,6 +11,8 @@ import Contact from './Pages/Contact/Contact';
 import Review from './Pages/Order/Review';
 import Footer from './Pages/Shared/Footer';
 import NotFound from './Pages/Shared/NotFound';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/Login/SignUp';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="review" element={<Review />} />
         <Route path="*" element={<NotFound />} />
 
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
       </Routes>
       <ToastContainer />
       <Footer></Footer>
