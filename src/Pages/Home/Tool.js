@@ -1,7 +1,11 @@
 import React from 'react';
-import PrimaryButton from '../Shared/PrimaryButton';
+import { useNavigate } from 'react-router-dom';
 
 const Tool = ({ tool }) => {
+    const navigate = useNavigate();
+    const handleBuy = (_id) => {
+        navigate(`/purchase/${_id}`);
+    }
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
@@ -14,7 +18,7 @@ const Tool = ({ tool }) => {
                 <p>Per Unit : {tool.price}</p>
                 <p>Available :{tool.available}</p>
                 <p>Minimum Quantity to order :{tool.minimum}</p>
-                <PrimaryButton>Buy Now</PrimaryButton>
+                <button className='btn btn-primary' onClick={() => { handleBuy(tool._id) }}>Purchase Now</button>
             </div>
         </div>
     );

@@ -13,6 +13,8 @@ import Footer from './Pages/Shared/Footer';
 import NotFound from './Pages/Shared/NotFound';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
+import Purchase from './Pages/Order/Purchase';
+import RequireAuth from './Pages/Login/RequireAuth';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/purchase/:_id" element={<Purchase />} />
+        <Route path="purchase" element={<RequireAuth><Purchase /></RequireAuth>} />
         <Route path="about" element={<About />} />
         <Route path="order" element={<Order />} />
         <Route path="contact" element={<Contact />} />
