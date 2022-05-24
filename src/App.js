@@ -10,6 +10,7 @@ import Order from './Pages/Order/Order';
 import Contact from './Pages/Contact/Contact';
 import Review from './Pages/Order/Review';
 import Footer from './Pages/Shared/Footer';
+import NotFound from './Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="order" element={<Order />} />
         <Route path="contact" element={<Contact />} />
         <Route path="review" element={<Review />} />
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
       <ToastContainer />
       <Footer></Footer>
