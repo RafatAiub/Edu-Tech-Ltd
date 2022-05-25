@@ -28,6 +28,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import Portfolio from './Pages/Personal/Portfolio';
 import Blogs from './Pages/Blogs/Blogs';
 import AddTool from './Pages/Dashboard/AddTool';
+import PurchasePage from './Pages/Order/PurchasePage';
 
 function App() {
   return (
@@ -37,15 +38,17 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/purchase/:_id" element={<Purchase />} /> */}
         <Route path="purchase/:_id" element={<RequireAuth><Purchase /></RequireAuth>} />
+        <Route path="purchasePage" element={<RequireAuth><PurchasePage /></RequireAuth>} />
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="history" element={<MyHistory></MyHistory>}></Route>
 
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addTool" element={<AddTool></AddTool>}></Route>
-          <Route path="manageDoctor" element={<RequireAdmin></RequireAdmin>}></Route>
+          <Route path="manageUser" element={<RequireAdmin></RequireAdmin>}></Route>
         </Route>
         <Route path="about" element={<About />} />
         <Route path="order" element={<Order />} />
