@@ -16,6 +16,17 @@ import SignUp from './Pages/Login/SignUp';
 import Purchase from './Pages/Order/Purchase';
 import RequireAuth from './Pages/Login/RequireAuth';
 
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrder from './Pages/Dashboard/MyOrder';
+import MyReview from './Pages/Dashboard/MyReview';
+import MyHistory from './Pages/Dashboard/MyHistory';
+import Payment from './Pages/Dashboard/Payment';
+import Users from './Pages/Dashboard/Users';
+import AddDoctor from './Pages/Dashboard/AddDoctor';
+import ManageDoctors from './Pages/Dashboard/ManageDoctors';
+import RequireAdmin from './Pages/Login/RequireAdmin';
+import Portfolio from './Pages/Personal/Portfolio';
+
 function App() {
   return (
     <div >
@@ -24,6 +35,16 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/purchase/:_id" element={<Purchase />} /> */}
         <Route path="purchase/:_id" element={<RequireAuth><Purchase /></RequireAuth>} />
+
+        <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
+          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="history" element={<MyHistory></MyHistory>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
+          <Route path="manageDoctor" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>}></Route>
+        </Route>
         <Route path="about" element={<About />} />
         <Route path="order" element={<Order />} />
         <Route path="contact" element={<Contact />} />
@@ -32,6 +53,7 @@ function App() {
 
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="portfolio" element={<Portfolio />} />
       </Routes>
       <ToastContainer />
       <Footer></Footer>
