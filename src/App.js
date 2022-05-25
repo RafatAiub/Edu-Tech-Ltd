@@ -26,6 +26,7 @@ import AddDoctor from './Pages/Dashboard/AddDoctor';
 import ManageDoctors from './Pages/Dashboard/ManageDoctors';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import Portfolio from './Pages/Personal/Portfolio';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="portfolio" element={<Portfolio />} />
+        <Route path="blogs" element={<Blogs />} />
       </Routes>
       <ToastContainer />
       <Footer></Footer>
