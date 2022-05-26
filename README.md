@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# Final Tool Manufacturer BD  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The live site of this project is [FireBase Deploy](https://github.com/facebook/create-react-app).
+
+## The Features Available of this projects are:
+* use navbar and using different routed to navigate one page to another easily.
+* use daisyui to provide user friendly interface with responsive functionality also.
+* use mongodb for storing the database.
+* use firebase for Authentication 
+* use email verification and also send or receive 
+* finally after order completed purchasing functionality. 
+
 
 ## Available Scripts
 

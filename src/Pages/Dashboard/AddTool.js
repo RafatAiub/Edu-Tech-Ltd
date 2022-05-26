@@ -41,7 +41,7 @@ const AddTool = () => {
 
                     }
                     // send to your database 
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://damp-spire-74934.herokuapp.com/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

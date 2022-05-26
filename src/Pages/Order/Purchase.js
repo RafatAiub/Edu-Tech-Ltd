@@ -6,7 +6,7 @@ const Purchase = () => {
     const { _id } = useParams();
     const [tool, setTool] = useState([]);
     const { img, name, price, minimum, available, description } = tool;
-    fetch(`http://localhost:5000/tools/${_id}`)
+    fetch(`https://damp-spire-74934.herokuapp.com/tools/${_id}`)
         .then(res => res.json())
         .then(data => setTool(data))
 
