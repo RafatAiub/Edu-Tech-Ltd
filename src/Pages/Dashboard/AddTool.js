@@ -31,7 +31,7 @@ const AddTool = () => {
             .then(result => {
                 if (result.success) {
                     const img = result.data.url;
-                    const doctor = {
+                    const tool = {
                         name: data.name,
                         img: img,
                         description: data.description,
@@ -47,16 +47,16 @@ const AddTool = () => {
                             'content-type': 'application/json',
                             authorization: `Bearer ${localStorage.getItem('accessToken')}`
                         },
-                        body: JSON.stringify(doctor)
+                        body: JSON.stringify(tool)
                     })
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('Doctor added successfully')
+                                toast.success('A new product added')
                                 reset();
                             }
                             else {
-                                toast.error('Failed to add the doctor');
+                                toast.error('Failed to add the product');
                             }
                         })
 
@@ -70,8 +70,8 @@ const AddTool = () => {
     // }
 
     return (
-        <div>
-            <h2 className="text-2xl">Add a New Doctor</h2>
+        <div className='flex flex-col justify-center items-center'>
+            <h2 className="text-2xl text-primary">Place A New Tool Here</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="form-control w-full max-w-xs">

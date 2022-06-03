@@ -8,26 +8,32 @@ const Dashboard = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
     return (
-        <div class="drawer drawer-mobile">
-            <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-                <h2 className='text-2xl font-bold text-purple-500'>Welcome to the Dashboard {user.displayName}</h2>
+        <div className="drawer drawer-mobile">
+            <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+                <h2 className='text-4xl font-bold text-gray text-center'>Welcome to Tool Plaza <br /> <span className='text-secondary font-mono text-xl'>{user.displayName}</span>  </h2>
                 <Outlet></Outlet>
             </div>
-            <div class="drawer-side">
-                <label for="dashboard-sidebar" class="drawer-overlay"></label>
-                <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
+            <div className="drawer-side">
+                <label for="dashboard-sidebar" className="drawer-overlay"></label>
+                <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link to="/dashboard">My Dashboard</Link></li>
-                    <li><Link to="/dashboard/review">Review Section</Link></li>
+                    {
+                        user && !admin && <>
+                            <li><Link to="/dashboard/">My Order</Link></li>
+                            <li><Link to="/dashboard/review">Rating Now</Link></li>
+                        </>
+                    }
                     <li><Link to="/dashboard/history">My Profile</Link></li>
-                    {user && <>
-                        <li><Link to="/dashboard/users">Show Users</Link></li>
-                        <li><Link to="/dashboard/addTool">Insert A New tool</Link></li>
+                    {admin && <>
 
+                        <li><Link to="/dashboard/addTool">ADD PRODUCT</Link></li>
+                        <li><Link to="/dashboard/manage-orders">Manage Orders</Link></li>
 
+                        <li><Link to="/dashboard/allUsers">Show Users</Link></li>
 
                     </>}
+
 
                 </ul>
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div id='blogs' className='fs-5'>
-            <div className='shadow-lg p-5 rounded m-2'>
-                <h3>How will you improve the performance of a React Application?</h3>
+        <div id='blogs' className='fs-5 text-2xl text-justify font-mono'>
+            <div className='shadow-xl p-5 rounded m-2'>
+                <h3 className='font-bold'>## How will you improve the performance of a React Application?</h3>
                 <p>The performance of mission-critical enterprise applications has a direct impact on customer satisfaction, employee productivity, business agility, and profitability.
 
                     To date, applications written in React are gaining more and more popularity. Developers love building all kinds of React apps because of their ability to handle UI components in browsers. On the other hand, it can cost you dearly. The size of a React application can be quite large for most React applications, which affects performance. The reason for this is that React is an advanced library and does not improve the performance of a website or application on its own. It must be properly configured and optimized in various aspects. Also, if you plan to attract a lot of users to your site, you need to optimize performance in a high-traffic environment to avoid unnecessary hassles.
@@ -12,7 +12,7 @@ const Blogs = () => {
                     For these reasons, knowing how to use best practices and optimize web applications is essential for both the developer and the product manager. This understanding is useful for ensuring that your React application provides a consistent and better user experience. In this blog, you will find how to speed your react application up and use performance optimization techniques, especially in high traffic scenarios.</p>
             </div>
             <div className='shadow-lg p-5 rounded m-2'>
-                <h3>What are the different ways to manage a state in a React application?</h3>
+                <h3 className='font-bold'>## What are the different ways to manage a state in a React application?</h3>
                 <p>
                     In React development, keeping track of how your application data changes over time is called state management. By managing the state of your application, you will be able to make dynamic apps that respond to user input. There are many methods of managing state in React, including class-based state management and third-party libraries like Redux. In this tutorial, you’ll manage state on functional components using a method encouraged by the official React documentation: Hooks.
 
@@ -23,21 +23,21 @@ const Blogs = () => {
                 </p>
             </div>
             <div className='shadow-lg p-5 rounded m-2'>
-                <h3> How does prototypical inheritance work?</h3>
+                <h3 className='font-bold'>## How does prototypical inheritance work?</h3>
                 <p>
                     Prototypal inheritance is a language feature that helps in that. In JavaScript, objects have a special hidden property Prototype as named in the specification, that is either null or references another object.
 
                 </p>
             </div>
             <div className='shadow-lg p-5 rounded m-2'>
-                <h3>You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h3>
+                <h3 className='font-bold'>## You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h3>
                 <p>
                     “Product of array except self” problem, states that you are given an array a [ ]. Print another array p [ ] of the same size such that value at i’th index of array p is equal to the product of all the elements of the original array except element at i’th index in array a.
 
                 </p>
             </div>
             <div className='shadow-lg p-5 rounded m-2'>
-                <h3> What is a unit test? Why should write unit tests?</h3>
+                <h3 className='font-bold'>## What is a unit test? Why should write unit tests?</h3>
                 <p>
                     Tests can be set to run either a one-time check at a certain time interval or can be run immediately in real-time to review changes. In short, unit tests help developers detect problems immediately, then fix them quickly. With fewer resources spent finding bugs, teams can move on to the next phase of a project.
                     Unit testing is one of the software testing types which includes the initial testing phase where the smallest components or the modules of a software are tested individually. With this method of testing, both testers and developers can isolate each module, identify and fix the system defects at a very early stage of the software development lifecycle (SDLC). Primarily, a unit test verifies different behavioral aspects of the system under test and can be broadly classified into state-based and interaction-based unit testing.

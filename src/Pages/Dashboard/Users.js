@@ -1,42 +1,41 @@
 import React from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
-import UserRow from './UserRow';
+import { toast } from 'react-toastify';
 
-const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://damp-spire-74934.herokuapp.com/user', {
-        method: 'GET',
-        headers: {
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
-    }).then(res => res.json()));
-    if (isLoading) {
-        return <Loading></Loading>
+const Users = ({ user }) => {
+    const { _id, email, role } = user;
+    const makeAdmin = () => {
+        fetch(`https://damp-spire-74934.herokuapp.com/user/admin/${email}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            },
+        }).then(res => res.json()).then(data => {
+            if (data.modifiedCount > 0) {
+                toast.success(`Successfully make an admin`);
+            }
+            else {
+                toast.error(`failed to make an admin`);
+            }
+
+        })
     }
     return (
-        <div>
-            <h2 className="text-2xl">All Users: {users.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            users.map(user => <UserRow
-                                key={user._id}
-                                user={user}
-                                refetch={refetch}
-                            ></UserRow>)
-                        }
-                    </tbody>
-                </table>
+        <div className="stats bg-primary text-primary-content m-3">
+
+            <div className="stat">
+                <div className="stat-title text-right font-mono"> {_id}</div>
+                <div className="text-2xl">{email}</div>
+                <div className="stat-actions">
+                    {
+                        role !== 'admin' && <>
+                            <button className="btn btn-sm btn-danger">Delete</button>
+                            <button className="btn btn-sm btn-danger m-2" onClick={makeAdmin}>Make Admin</button>
+                        </>
+                    }
+
+                </div>
             </div>
+
         </div>
     );
 };
