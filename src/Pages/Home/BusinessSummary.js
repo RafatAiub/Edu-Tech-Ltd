@@ -6,14 +6,14 @@ const BusinessSummary = () => {
     const flag = <FontAwesomeIcon icon="fa-solid fa-flag" />
     return (
         <div className='text-center'>
-            <h1 className='text-secondary font-bold text text-4xl'>MILLION BUSINESS TRUST US</h1>
-            <h4 className='font-bold text-2xl'>Try To Understand Users Expectation</h4>
+            <h1 className='text-secondary font-bold text text-4xl'>Students Trust Us</h1>
+            <h4 className='font-bold text-2xl'>Try To Understand Student expectation</h4>
 
             <div className="card card-compact  bg-base-100 shadow-xl grid grid-cols-4 py-5">
                 <div>
                     <figure className='text-5xl text-secondary'><FaFlagCheckered /></figure>
                     <div className="text-center ">
-                        <h2 className="text-3xl font-bold">72</h2>
+                        <h2 className="text-3xl font-bold">17</h2>
                         <p className='text-secondary text-lg'>Countries</p>
 
                     </div>
@@ -22,7 +22,7 @@ const BusinessSummary = () => {
                     <figure className='text-5xl text-secondary'><FaHandsHelping /></figure>
                     <div className="text-center ">
                         <h2 className="text-3xl font-bold">273+</h2>
-                        <p className='text-secondary text-lg'>Happy Clients</p>
+                        <p className='text-secondary text-lg'>Happy students</p>
 
                     </div>
                 </div>

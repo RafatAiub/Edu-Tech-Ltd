@@ -14,11 +14,10 @@ const Tool = ({ tool }) => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{tool.name}</h2>
-                <p>Description {tool.description}</p>
-                <p>Per Unit : {tool.price}</p>
-                <p>Available :{tool.available}</p>
-                <p>Minimum Quantity to order :{tool.minimum}</p>
-                <button className='btn btn-primary' onClick={() => { handleBuy(tool._id) }}>Purchase Now</button>
+                <p>{tool.description}</p>
+                <p>PRICE : ${tool.price}</p>
+
+                <button className='btn btn-primary' onClick={() => { handleBuy(tool._id) }}>Enroll Now</button>
             </div>
         </div>
     );
