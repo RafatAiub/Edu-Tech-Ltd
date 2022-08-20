@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 const Navbar = () => {
 
     const [user] = useAuthState(auth);
+    console.log(user);
 
     const logout = () => {
         signOut(auth);
@@ -29,7 +30,14 @@ const Navbar = () => {
         <li>{user ? <>
             <button className="btn btn-ghost" onClick={logout} >Sign Out</button>
             <li className='text-lg font-bold text-primary'>{user.displayName}</li>
-        </> : <Link to="/login">Login</Link>}</li>
+
+            <label tabindex="0" class=" avatar">
+                <div class="w-10 rounded-full">
+                    <img src={user.photoURL} alt='' />
+                </div>
+            </label>
+        </>
+            : <Link to="/login">Login</Link>}</li>
     </>
     return (
         <div className="navbar bg-base-100">
